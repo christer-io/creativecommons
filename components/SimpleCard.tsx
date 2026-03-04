@@ -1,0 +1,29 @@
+
+
+
+type Props = {
+  title: string;
+  url: string;
+  description: string;
+  tag: string;
+  bg: string;
+  text: string;
+}
+
+function SimpleCard({title, url, description, tag, bg, text}: Props) {
+
+  return (
+            
+            <div className={`border ${bg} ${text} hover:text-blue-600 border-blue-500/50 rounded-lg group cursor-pointer overflow-hidden`}>
+                <div className="flex justify-between p-3 ">
+                    <div>
+                    <p className="text-lg text-left">{title}</p> 
+                     <p className="pt-1 text-blue-900">{tag}</p>
+                    </div>
+                </div>
+               <p className="text-lg pt-5 pr-4 pb-3 text-right">&rarr;</p> 
+            </div>   
+            
+  )
+}
+export default SimpleCard
