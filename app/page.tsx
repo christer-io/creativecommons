@@ -41,7 +41,7 @@ export default async function Home() {
           <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:pb-3 "> 
                 {allposts.map((posta) => (  
                     <Link key={posta._id} href={`/post/${posta.slug.current}`}>
-                    <SimpleCard title={posta.title} url="" description="" tag="" bg="bg-blue-600" text="text-white"/>
+                    <SimpleCard title={posta.title} url="" description="" tag="" bg="bg-blue-500/80" text="text-white"/>
                     </Link>
                 ))}
           </div>
@@ -70,7 +70,7 @@ export default async function Home() {
             <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:pb-3 "> 
                   {faq.map((faqa) => (  
                       <Link key={faqa._id} href={`/post/${faqa.slug.current}`}>
-                      <SimpleCard title={faqa.title} url="" description="" tag="" bg="bg-white text" text="text-slate-700"/>
+                      <SimpleCard title={faqa.title} url="" description="" tag="" bg="bg-white" text="text-slate-700"/>
                       </Link>
                   ))}
             </div>
