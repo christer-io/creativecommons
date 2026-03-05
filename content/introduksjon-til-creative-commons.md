@@ -19,6 +19,6 @@ Det er viktig å presisere at Fri kultur i stor grad er bygget på tanken om ver
 
 For ytterligere informasjon og kunnskap om Creative Commons:
 
-- Gå gjennom vår [introduksjon til Creative Commons](http://localhost:3000/ressurs/introduksjon-til-creative-commons)
-- Test dine kunnskaper [om Creative Commons](http://localhost:3000/ressurs/test-din-kunnskap-om-creative-commons)
-- Lese boken [«Gjort med Creative Commons»](http://localhost:3000/post/boken-made-with-creative-commons-pa-norsk)
+- Gå gjennom vår [introduksjon til Creative Commons](/ressurs/introduksjon-til-creative-commons)
+- Test dine kunnskaper [om Creative Commons](/ressurs/test-din-kunnskap-om-creative-commons)
+- Lese boken [«Gjort med Creative Commons»](/post/boken-made-with-creative-commons-pa-norsk)
