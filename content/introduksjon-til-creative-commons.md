@@ -19,6 +19,4 @@ Det er viktig å presisere at Fri kultur i stor grad er bygget på tanken om ver
 
 For ytterligere informasjon og kunnskap om Creative Commons:
 
-- Gå gjennom vår [introduksjon til Creative Commons](/ressurs/introduksjon-til-creative-commons)
-- Test dine kunnskaper [om Creative Commons](/ressurs/test-din-kunnskap-om-creative-commons)
-- Lese boken [«Gjort med Creative Commons»](/post/boken-made-with-creative-commons-pa-norsk)
+- Lese boken [«Gjort med Creative Commons»](https://www.lulu.com/shop/paul-stacey-and-sarah-hinchliff-pearson-and-bryan-mathers-and-ryan-merkley/gjort-med-creative-commons/paperback/product-m5jy75.html?page=1&pageSize=4)
