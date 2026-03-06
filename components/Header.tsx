@@ -1,3 +1,10 @@
+import { Noto_Sans } from 'next/font/google';
+
+const notoSans = Noto_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+});
+
 function Header() {
   const navLinks = [
     { href: '/post/kreditering', label: 'Kreditering' },
@@ -9,13 +16,17 @@ function Header() {
   return (
     <div>
       <header>
-        <nav className="border-gray-200 bg-gray-200 px-4 py-2.5 lg:px-6">
+        <nav className="border-gray-200 bg-white px-4 py-3 lg:px-6">
           <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
             <a href="/" className="flex items-center">
-              <span className="self-center whitespace-nowrap text-xl font-semibold text-[#4D8FE4]">
+              <span
+                className={`${notoSans.className} self-center whitespace-nowrap text-xl font-medium text-[#4D8FE4]`}
+              >
                 Creative
               </span>
-              <span className="self-center whitespace-nowrap text-xl font-semibold text-slate-700">
+              <span
+                className={`${notoSans.className} self-center whitespace-nowrap text-xl font-medium text-slate-700`}
+              >
                 {' '}
                 Commons.no
               </span>

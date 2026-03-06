@@ -38,9 +38,9 @@ export default async function Home() {
        
        {/* listing basic intro articles on Creative Commons */}
        <SectionHeader title="CC Introduksjon" subTitle="Kom igang med Creative Commons"/>
-          <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:pb-3 "> 
+          <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1.5 md:gap-3 p-2 md:pb-3 "> 
                 {allposts.map((posta) => (  
-                    <Link key={posta._id} href={`/post/${posta.slug.current}`}>
+                    <Link key={posta._id} href={`/post/${posta.slug.current}`} className="block h-full">
                     <SimpleCard title={posta.title} url="" description="" tag="" bg="bg-blue-500/80" text="text-white"/>
                     </Link>
                 ))}
@@ -67,9 +67,9 @@ export default async function Home() {
         {/* listing FAQ */}
         <div className="mx-auto bg-white max-w-7xl pb-7">
         <SectionHeader title="Ofte spurte spørsmål" subTitle="Kom igang med Creative Commons"/>
-            <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:pb-3 "> 
+            <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1.5 md:gap-3 p-2 md:pb-3 "> 
                   {faq.map((faqa) => (  
-                      <Link key={faqa._id} href={`/post/${faqa.slug.current}`}>
+                      <Link key={faqa._id} href={`/post/${faqa.slug.current}`} className="block h-full">
                       <SimpleCard title={faqa.title} url="" description="" tag="" bg="bg-white" text="text-slate-700"/>
                       </Link>
                   ))}

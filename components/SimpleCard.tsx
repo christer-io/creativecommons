@@ -14,8 +14,8 @@ function SimpleCard({title, url, description, tag, bg, text}: Props) {
 
   return (
             
-            <div className={`border ${bg} ${text} hover:bg-blue-200/80 hover:text-black border-blue-500/50 rounded-lg group cursor-pointer overflow-hidden`}>
-                <div className="flex justify-between p-3 ">
+            <div className={`h-full border ${bg} ${text} hover:bg-blue-200/80 hover:text-black border-blue-500/50 rounded-lg group cursor-pointer overflow-hidden flex flex-col justify-between`}>
+                <div className="flex justify-between p-3">
                     <div>
                     <p className="text-lg text-left">{title}</p> 
                      <p className="pt-1 text-blue-900">{tag}</p>
