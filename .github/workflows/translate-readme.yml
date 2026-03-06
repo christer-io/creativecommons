@@ -1,0 +1,35 @@
+name: Translate README to Norwegian
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+  workflow_dispatch:
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install deep-translator
+
+      - name: Translate README to Norwegian
+        run: python .github/scripts/translate_readme.py
+
+      - name: Commit translated README
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'docs: update Norwegian README translation [skip ci]'
+          file_pattern: 'README_NO.md'
