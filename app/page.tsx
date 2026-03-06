@@ -1,24 +1,24 @@
 
-import Banner from "../components/Banner"
+import { Banner } from "@/components/Banner";
 import Link from 'next/link';
-import SimpleCard from "../components/SimpleCard"
-import { fetchPosts } from '@/app/actions'
-import { fetchAllPosts } from '@/app/actions'
-import { fetchFAQ } from '@/app/actions'
-import { fetchStory } from '@/app/actions'
-import { fetchLicense } from '@/app/actions'
-import SectionHeader from "@/components/SectionHeader";
-import Header from "@/components/Header";
-import ReadMore from '@/components/ReadMore';
-import Footer from '@/components/Footer';
-import Hero from '@/components/Hero';
-import BannerSmall from '@/components/BannerSmall';
-import ImgCard from "@/components/ImgCard";
+import { SimpleCard } from "@/components/SimpleCard";
+import { fetchPosts } from '@/app/actions';
+import { fetchAllPosts } from '@/app/actions';
+import { fetchFAQ } from '@/app/actions';
+import { fetchStory } from '@/app/actions';
+import { fetchLicense } from '@/app/actions';
+import { SectionHeader } from "@/components/SectionHeader";
+import { Header } from "@/components/Header";
+import { ReadMore } from '@/components/ReadMore';
+import { Footer } from '@/components/Footer';
+import { Hero } from '@/components/Hero';
+import { BannerSmall } from '@/components/BannerSmall';
+import { ImgCard } from "@/components/ImgCard";
 
 export default async function Home() {
   /* fetching data from serverside */
   const posts = await fetchPosts();
-  const allposts = await fetchAllPosts();
+  const allPosts = await fetchAllPosts();
   const faq = await fetchFAQ();
   const story = await fetchStory();
   const licenses = await fetchLicense();
@@ -39,9 +39,9 @@ export default async function Home() {
        {/* listing basic intro articles on Creative Commons */}
        <SectionHeader title="CC Introduksjon" subTitle="Kom igang med Creative Commons"/>
           <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1.5 md:gap-3 p-2 md:pb-3 "> 
-                {allposts.map((posta) => (  
-                    <Link key={posta._id} href={`/post/${posta.slug.current}`} className="block h-full">
-                    <SimpleCard title={posta.title} url="" description="" tag="" bg="bg-blue-500/80" text="text-white"/>
+                {allPosts.map((post) => (  
+                    <Link key={post._id} href={`/post/${post.slug.current}`} className="block h-full">
+                    <SimpleCard title={post.title} url="" description="" tag="" bg="bg-blue-500/80" text="text-white"/>
                     </Link>
                 ))}
           </div>

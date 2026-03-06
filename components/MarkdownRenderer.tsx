@@ -7,7 +7,7 @@ type Props = {
   markdown: string;
 };
 
-export default function MarkdownRenderer({ markdown }: Props) {
+export function MarkdownRenderer({ markdown }: Props) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}

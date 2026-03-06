@@ -8,7 +8,7 @@ interface Props {
 
 }
 
-function ImgCard({ url, img, description, title }: Props ) {
+export function ImgCard({ url, img, description, title }: Props ) {
   return (
     <div className="border text-wihte border-gray-200 rounded-lg group cursor-pointer overflow-hidden">
       <img className="h-40 lg:h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out" src={img} alt={title} />
@@ -23,5 +23,3 @@ function ImgCard({ url, img, description, title }: Props ) {
     </div>
   )
 }
-
-export default ImgCard

@@ -1,7 +1,7 @@
-import React from 'react'
-import BodyText from './BodyText';
-import FooterPath from './FooterPath';
-import Button from './Button';
+import React from 'react';
+import { BodyText } from './BodyText';
+import { FooterPath } from './FooterPath';
+import { Button } from './Button';
 
 type Props = {
   body: string;
@@ -11,7 +11,7 @@ type Props = {
  
 }
 
-function PathEnd({ body, description, back, next}: Props) {
+export function PathEnd({ body, description, back, next}: Props) {
   return (
     
     <div className='pb-20 bg-gray-50 min-w-full h-full text-center'>
@@ -22,5 +22,3 @@ function PathEnd({ body, description, back, next}: Props) {
     </div>
   )
 }
-
-export default PathEnd

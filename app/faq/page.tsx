@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import SimpleCard from "../../components/SimpleCard"
+import { SimpleCard } from "@/components/SimpleCard";
 import { fetchFAQ } from "@/app/actions";
 
-
-import SectionHeader from "@/components/SectionHeader";
-import Header from "@/components/Header";
-import Footer from '@/components/Footer';
-import BannerSmall from '@/components/BannerSmall';
+import { SectionHeader } from "@/components/SectionHeader";
+import { Header } from "@/components/Header";
+import { Footer } from '@/components/Footer';
+import { BannerSmall } from '@/components/BannerSmall';
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default async function Faq() {

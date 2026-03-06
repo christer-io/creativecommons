@@ -1,0 +1,6 @@
+# Prettier
+node_modules/
+.next/
+.prettierignore
+dist/
+build/

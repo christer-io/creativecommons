@@ -1,4 +1,4 @@
-import Button from "@/components/Button"
+import { Button } from "@/components/Button"
 
 type Props = {
     title: string;
@@ -8,7 +8,7 @@ type Props = {
     img: string;
 }
 
-function Hero({ title, textPart2, buttonText, url, img }: Props) {
+export function Hero({ title, textPart2, buttonText, url, img }: Props) {
   return (
     <div>
         <section className="bg-gray-50 ">
@@ -26,5 +26,3 @@ function Hero({ title, textPart2, buttonText, url, img }: Props) {
     </div>
   )
 }
-
-export default Hero

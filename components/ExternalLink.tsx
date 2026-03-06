@@ -6,7 +6,7 @@ type Props = {
  
 }
 
-function ExternalLink({title, url, description}: Props) {
+export function ExternalLink({title, url, description}: Props) {
 
   return (
             
@@ -22,4 +22,3 @@ function ExternalLink({title, url, description}: Props) {
             
   )
 }
-export default ExternalLink

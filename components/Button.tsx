@@ -4,7 +4,7 @@ type Props = {
   url: string;
 }
 
-function Button( {buttonText, url}: Props ) {
+export function Button( {buttonText, url}: Props ) {
   return (
     <div>
         <a href={url} className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
@@ -14,5 +14,3 @@ function Button( {buttonText, url}: Props ) {
     </div>
   )
 }
-
-export default Button

@@ -1,11 +1,11 @@
-import MarkdownRenderer from "./MarkdownRenderer";
+import { MarkdownRenderer } from "./MarkdownRenderer";
 
 type Props = {
     body: string;
    
   }
 
-function BodyText({body}: Props) {
+export function BodyText({body}: Props) {
   return (
     <div>
         <div className=" mx-auto">
@@ -18,5 +18,3 @@ function BodyText({body}: Props) {
     </div>
   )
 }
-
-export default BodyText

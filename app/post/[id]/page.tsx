@@ -1,6 +1,6 @@
-import NotFound from "@/components/NotFound"
-import Header from "../../../components/Header"
-import MarkdownRenderer from "@/components/MarkdownRenderer";
+import { NotFound } from "@/components/NotFound";
+import { Header } from "@/components/Header";
+import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import { getAllMarkdownPosts, getMarkdownPostBySlug } from "@/lib/content";
 import GitHubIcon from "@mui/icons-material/GitHub";
 

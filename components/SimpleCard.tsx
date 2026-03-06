@@ -10,7 +10,7 @@ type Props = {
   text: string;
 }
 
-function SimpleCard({title, url, description, tag, bg, text}: Props) {
+export function SimpleCard({title, url, description, tag, bg, text}: Props) {
 
   return (
             
@@ -26,4 +26,3 @@ function SimpleCard({title, url, description, tag, bg, text}: Props) {
             
   )
 }
-export default SimpleCard

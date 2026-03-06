@@ -4,7 +4,7 @@ type Props = {
     url: string;
 }
 
-function ReadMore({title, url}: Props) {
+export function ReadMore({title, url}: Props) {
   return (
     <div>
         <div>
@@ -13,5 +13,3 @@ function ReadMore({title, url}: Props) {
     </div>
   )
 }
-
-export default ReadMore

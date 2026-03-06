@@ -1,4 +1,4 @@
-function Footer() {
+export function Footer() {
     const signalGroupUrl =
       "https://signal.group/#CjQKICNZFlK2RTBSgZQdtdLr8O4spTFJmtwxUvkvAO_4euIREhDdmw_dl4v_bI8jGJdENotM";
 
@@ -45,5 +45,3 @@ function Footer() {
       </div>
     )
   }
-  
-  export default Footer

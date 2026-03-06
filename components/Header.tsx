@@ -5,7 +5,7 @@ const notoSans = Noto_Sans({
   weight: ['400', '500'],
 });
 
-function Header() {
+export function Header() {
   const navLinks = [
     { href: '/post/kreditering', label: 'Kreditering' },
     { href: '/post/norske-lisenser-og-verktoy', label: 'Lisenser' },
@@ -62,5 +62,3 @@ function Header() {
     </div>
   );
 }
-
-export default Header;
