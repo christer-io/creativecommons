@@ -4,10 +4,6 @@ import { resourceUrls } from "@/data/resourceUrls";
 
 export const runtime = "edge";
 
-export async function generateStaticParams() {
-  return resourceUrls.map((resource) => ({ id: resource.id }));
-}
-
 
 // fetching data
 async function Resource({params}: {
