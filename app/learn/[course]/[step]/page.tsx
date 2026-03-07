@@ -3,9 +3,14 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import LearningPathStepper from "@/components/LearningPathStepper";
-import { getLearningStep } from "@/lib/learningPath";
+import { getAllLearningStepParams, getLearningStep } from "@/lib/learningPath";
 
-export const runtime = "nodejs";
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  return getAllLearningStepParams();
+}
 
 type Props = {
   params: Promise<{

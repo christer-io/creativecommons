@@ -2,6 +2,9 @@ import { Header } from "@/components/Header";
 import { NotFound } from '@/components/NotFound';
 import { getAllMarkdownPosts, getMarkdownPostBySlug } from "@/lib/content";
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const posts = await getAllMarkdownPosts();
   return posts
