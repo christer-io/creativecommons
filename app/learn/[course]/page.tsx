@@ -1,13 +1,7 @@
 import { notFound, redirect } from "next/navigation";
-import { getLearningPath, getLearningPathCourses } from "@/lib/learningPath";
+import { getLearningPath } from "@/lib/learningPath";
 
-export const dynamic = "force-static";
-export const dynamicParams = false;
-
-export async function generateStaticParams() {
-  const courses = await getLearningPathCourses();
-  return courses.map((course) => ({ course }));
-}
+export const runtime = "nodejs";
 
 type Props = {
   params: Promise<{

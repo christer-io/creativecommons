@@ -19,14 +19,6 @@ export type LearningPath = {
 
 const learningPathsDir = path.join(process.cwd(), "content", "learning-paths");
 
-export async function getLearningPathCourses(): Promise<string[]> {
-  const entries = await fs.readdir(learningPathsDir, { withFileTypes: true });
-  return entries
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name)
-    .sort((a, b) => a.localeCompare(b));
-}
-
 function stripQuotes(value: string) {
   const trimmed = value.trim();
   if (
@@ -121,18 +113,4 @@ export async function getLearningStep(course: string, stepSlug: string) {
   const pathData = await getLearningPath(course);
   const step = pathData.steps.find((item) => item.slug === stepSlug) || null;
   return { pathData, step };
-}
-
-export async function getAllLearningStepParams(): Promise<
-  Array<{ course: string; step: string }>
-> {
-  const courses = await getLearningPathCourses();
-  const allSteps = await Promise.all(
-    courses.map(async (course) => {
-      const pathData = await getLearningPath(course);
-      return pathData.steps.map((step) => ({ course, step: step.slug }));
-    })
-  );
-
-  return allSteps.flat();
 }

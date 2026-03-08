@@ -1,11 +1,12 @@
 import { Header } from "@/components/Header";
-import { notFound } from "next/navigation";
-import { resourceUrls } from "@/data/resourceUrls";
-
-export const runtime = "edge";
+import { NotFound } from '@/components/NotFound';
+import { getAllMarkdownPosts, getMarkdownPostBySlug } from "@/lib/content";
 
 export async function generateStaticParams() {
-  return resourceUrls.map((resource) => ({ id: resource.id }));
+  const posts = await getAllMarkdownPosts();
+  return posts
+    .filter((post) => Boolean(post.source))
+    .map((post) => ({ id: post.slug.current }));
 }
 
 
@@ -15,14 +16,20 @@ async function Resource({params}: {
 }) 
 {
 const { id } = await params;
-const resource = resourceUrls.find((item) => item.id === id);
-if (!resource?.source) notFound();
+const myPost = await getMarkdownPostBySlug(id);
+const resourceUrl = myPost?.source || "";
+if (!myPost || !resourceUrl) {
+    // returning 404 page
+    return <div>
+        <NotFound />
+    </div>
+  }
 
 return (
     <div className='bg-white text-black'>
         <Header />
         <div className="h-screen max-w-3xl mx-auto pb-9">
-            <iframe className="h-full w-full pt-3" src={resource.source}  title="Creative Commons"></iframe> 
+            <iframe className="h-full w-full pt-3" src={resourceUrl}  title="Creative Commons"></iframe> 
         </div> 
         
     </div>
